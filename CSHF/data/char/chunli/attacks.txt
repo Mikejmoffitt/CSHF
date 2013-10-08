@@ -1,0 +1,486 @@
+animnum					,21								,Play this animation number
+hitstun					,14								,How many frames victim is stunned
+knockback				,3.8						,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,0								,0 High, 1 Med, 2 Low, 3 Fireball
+knockdown				,0								,Number of frames to be knocked down
+vecx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,-2								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,4								,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,22
+hitstun					,18
+knockback				,4.4
+whiffsnd				,2
+atktype					,0
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,-5
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,5
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,23
+hitstun					,14
+knockback				,6
+whiffsnd				,3
+atktype					,1
+knockdown				,0		
+vecx					,0
+vecy					,0
+kby						,-8
+hitfreeze				,8
+damage					,225
+noairvuln				,1
+hitsnd					,6
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,24								,Play this animation number
+hitstun					,16								,How many frames victim is stunned
+knockback				,4.4							,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,1								,0 High, 1 Med, 2 Low
+knockdown				,0								,Number of frames to be knocked down
+vevx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,-1								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,4								,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,25
+hitstun					,19
+knockback				,4.4
+whiffsnd				,2	
+atktype					,1
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,-3
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,5
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,26
+hitstun					,14
+knockback				,5.6
+whiffsnd				,3
+atktype					,1
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,-7
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,6
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,----------------------[SECTION END]-------------------- [ STARTING CROUCHING ] 
+animnum					,27								,Play this animation number
+hitstun					,14								,How many frames victim is stunned
+knockback				,3.6							,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,0								,0 High, 1 Med, 2 Low
+knockdown				,0								,Number of frames to be knocked down
+vevx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,-2								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,1								,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,28
+hitstun					,18
+knockback				,4.4
+whiffsnd				,2
+atktype					,0
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,-3
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,3
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,29
+hitstun					,14
+knockback				,6
+whiffsnd				,3
+atktype					,1
+knockdown				,0		
+vecx					,0
+vecy					,0
+kby						,-9
+hitfreeze				,8
+damage					,225
+noairvuln				,1
+hitsnd					,7
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,30								,Play this animation number
+hitstun					,12								,How many frames victim is stunned
+knockback				,4.4							,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,2								,0 High, 1 Med, 2 Low
+knockdown				,0								,Number of frames to be knocked down
+vevx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,-1								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,4								,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,31
+hitstun					,17
+knockback				,4.4
+whiffsnd				,2	
+atktype					,2
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,-3
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,5
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,32
+hitstun					,16
+knockback				,3
+whiffsnd				,3
+atktype					,2
+knockdown				,128
+vevx					,0
+vecy					,0
+kby						,-4
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,6
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,----------------------[SECTION END]-------------------- [ STARTING JUMPING ]
+animnum					,33							,Play this animation number
+hitstun					,14								,How many frames victim is stunned
+knockback				,3							,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,0								,0 High, 1 Med, 2 Low
+knockdown				,0								,Number of frames to be knocked down
+vecx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,-2								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,4 							,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,34
+hitstun					,18
+knockback				,4.4
+whiffsnd				,2
+atktype					,0
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,1
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,5
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,35
+hitstun					,14
+knockback				,6
+whiffsnd				,3
+atktype					,0
+knockdown				,0		
+vecx					,0
+vecy					,0
+kby						,2
+hitfreeze				,8
+damage					,225
+noairvuln				,1
+hitsnd					,6
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,36							,Play this animation number
+hitstun					,16								,How many frames victim is stunned
+knockback				,3							,dx(0) for victim
+whiffsnd				,1								,Sound to play
+atktype					,0								,0 High, 1 Med, 2 Low
+knockdown				,0								,Number of frames to be knocked down
+vevx					,0								,Attacker's dx(0)
+vecy					,0								,Attacker's dy(0) (in air)
+kby						,0								,dy(0) for victim (for knockdown or air)
+hitfreeze				,4								,How many frames of hitfreeze
+damage					,100							,Damage dealt
+noairvuln				,1								,1 to disable hitboxes when airborn
+hitsnd					,4								,Which sound index to play on hit
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,37
+hitstun					,19
+knockback				,4.4
+whiffsnd				,2	
+atktype					,0
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,0
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,5
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum					,38
+hitstun					,14
+knockback				,5
+whiffsnd				,3
+atktype					,0
+knockdown				,0
+vevx					,0
+vecy					,0
+kby						,1
+hitfreeze				,5
+damage					,150
+noairvuln				,1
+hitsnd					,6
+vecdelay				,0
+groundonly,				,0
+vecxdec					,0
+atkgrav					,0.4
+x,----------------------[SECTION END]-------------------- [[ START SPECIAL ATTACKS ]]
+animnum = nimnum		,39
+hitstun					,19
+knockback				,2.6
+whiffsnd				,8	
+atktype					,0
+knockdown				,128
+vecx					,3
+vecy					,-5.6
+kby						,-8
+hitfreeze				,5
+damage					,120
+noairvuln				,1
+hitsnd					,7
+vecdelay				,5
+groundonly,				,1
+vecxdec					,0.5
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum = nimnum		,40
+hitstun					,19
+knockback				,2.8
+whiffsnd				,8	
+atktype					,0
+knockdown				,128
+vecx					,4
+vecy					,-6
+kby						,-7
+hitfreeze				,6
+damage					,110
+noairvuln				,1
+hitsnd					,7
+vecdelay				,6
+groundonly,				,1
+vecxdec					,0.4
+atkgrav					,0.4
+x,-------------------------------------------------------
+animnum = nimnum		,41
+hitstun					,19
+knockback				,3
+whiffsnd				,8	
+atktype					,0
+knockdown				,128
+vecx					,8
+vecy					,-8
+kby						,-6
+hitfreeze				,8
+damage					,100
+noairvuln				,1
+hitsnd					,7
+vecdelay				,7
+groundonly,				,1
+vecxdec					,0.5
+atkgrav					,0.4
+x,------------------------------------------------------- [ START TATSU ]
+animnum = nimnum		,42
+hitstun					,17
+knockback				,2
+whiffsnd				,10	
+atktype					,1
+knockdown				,128
+vecx					,2.6
+vecy					,-2
+kby						,-2
+hitfreeze				,8
+damage					,70
+noairvuln				,0
+hitsnd					,7
+vecdelay				,6
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0.2
+x,-------------------------------------------------------
+animnum = nimnum		,43
+hitstun					,18
+knockback				,2.4
+whiffsnd				,10	
+atktype					,1
+knockdown				,128
+vecx					,3
+vecy					,-3
+kby						,-3
+hitfreeze				,8
+damage					,60
+noairvuln			s	,0
+hitsnd					,7
+vecdelay				,6
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0.2
+x,-------------------------------------------------------
+animnum = nimnum		,44
+hitstun					,19
+knockback				,3.4
+whiffsnd				,10	
+atktype					,1
+knockdown				,128
+vecx					,3.6
+vecy					,-4
+kby						,-3
+hitfreeze				,8
+damage					,50
+noairvuln				,0
+hitsnd					,7
+vecdelay				,6
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0.2
+x,-------------------------------------------------------
+animnum = nimnum		,45
+hitstun					,12
+knockback				,2
+whiffsnd				,9	
+atktype					,3
+knockdown				,0
+vecx					,4
+vecy					,0
+kby						,-4
+hitfreeze				,8
+damage					,100
+noairvuln				,0
+hitsnd					,7
+vecdelay				,1
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0
+x,-------------------------------------------------------
+animnum = nimnum		,45
+hitstun					,13
+knockback				,2.8
+whiffsnd				,9	
+atktype					,3
+knockdown				,0
+vecx					,4.5
+vecy					,0
+kby						,-5
+hitfreeze				,8
+damage					,115
+noairvuln				,0
+hitsnd					,7
+vecdelay				,1
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0
+x,-------------------------------------------------------
+animnum = nimnum		,45
+hitstun					,15
+knockback				,3.4
+whiffsnd				,9	
+atktype					,3
+knockdown				,0
+vecx					,5
+vecy					,0
+kby						,-6
+hitfreeze				,8
+damage					,130
+noairvuln				,0
+hitsnd					,7
+vecdelay				,1
+groundonly,				,1
+vecxdec					,0
+atkgrav					,0
+x,-------------------------------------------------------
