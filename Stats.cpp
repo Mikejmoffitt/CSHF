@@ -1,5 +1,8 @@
 #include "Stats.h"
-Stats::Stats(){};
+Stats::Stats()
+{
+
+}
 
 void Stats::loadStats(std::vector<double> data)
 {
@@ -15,4 +18,4 @@ void Stats::loadStats(std::vector<double> data)
 	FLIPSPR = int(data.at(9));
 	WIDTH = int(data.at(10));
 	HEIGHT = int(data.at(11));
-};
+}

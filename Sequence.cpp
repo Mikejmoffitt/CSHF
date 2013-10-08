@@ -63,16 +63,16 @@ void Sequence::animate() // This runs once per tick
 
 void Sequence::blitShadow(int xpos, int ypos, bool flip, float mult)
 {
-	int theHeight = al_get_bitmap_height(this->getFrame());
-	int theX = xpos+(this->xoff[this->animFrame]);
-	int theY = ypos-(this->yoff[this->animFrame])+(int((1.0 - mult) * (theHeight)));
-	if (flip ^ this->flip[this->animFrame])
+	int theHeight = al_get_bitmap_height(getFrame());
+	int theX = xpos+(xoff[animFrame]);
+	int theY = ypos-(yoff[animFrame])+(int((1.0 - mult) * (theHeight)));
+	if (flip ^ this->flip[animFrame])
 	{
-		al_draw_tinted_scaled_bitmap(this->getFrame(),al_map_rgb(0,0,0),0,0,al_get_bitmap_width(this->getFrame()),theHeight,theX,theY,al_get_bitmap_width(this->getFrame()),theHeight*mult,ALLEGRO_FLIP_HORIZONTAL);
+		al_draw_tinted_scaled_bitmap(getFrame(),al_map_rgb(0,0,0),0,0,al_get_bitmap_width(getFrame()),theHeight,theX,theY,al_get_bitmap_width(getFrame()),theHeight*mult,ALLEGRO_FLIP_HORIZONTAL);
 	}
 	else
 	{
-		al_draw_tinted_scaled_bitmap(this->getFrame(),al_map_rgb(0,0,0),0,0,al_get_bitmap_width(this->getFrame()),theHeight,theX,theY,al_get_bitmap_width(this->getFrame()),theHeight*mult,0);
+		al_draw_tinted_scaled_bitmap(getFrame(),al_map_rgb(0,0,0),0,0,al_get_bitmap_width(getFrame()),theHeight,theX,theY,al_get_bitmap_width(getFrame()),theHeight*mult,0);
 	}
 }
 
@@ -80,34 +80,34 @@ void Sequence::blit(int xpos, int ypos, bool flip)
 {
 	ALLEGRO_COLOR *tint = 0;
 	// Blits to the screen.
-	if (flip ^ this->flip[this->animFrame])
+	if (flip ^ this->flip[animFrame])
 	{
-		al_draw_bitmap(this->getFrame(),xpos+(this->xoff[this->animFrame]),ypos+(this->yoff[this->animFrame]),ALLEGRO_FLIP_HORIZONTAL);
+		al_draw_bitmap(getFrame(),xpos+(xoff[animFrame]),ypos+(yoff[animFrame]),ALLEGRO_FLIP_HORIZONTAL);
 	}
 	else
 	{
-		al_draw_bitmap(this->getFrame(),xpos+(this->xoff[this->animFrame]),ypos+(this->yoff[this->animFrame]),0);
+		al_draw_bitmap(getFrame(),xpos+(xoff[animFrame]),ypos+(yoff[animFrame]),0);
 	}
 }
 
 std::vector<int> Sequence::getRealBoxDim(Hitbox box, int xpos, int ypos, bool direction)
 {
 	int theX;
-	if (direction ^ flip[this->animFrame])
+	if (direction ^ flip[animFrame])
 	{
-		theX = xpos + (al_get_bitmap_width(this->getFrame()) - box.xPos[this->animFrame] - box.width[this->animFrame]);
+		theX = xpos + (al_get_bitmap_width(getFrame()) - box.xPos[animFrame] - box.width[animFrame]);
 	}
 	else
 	{
-		theX = xpos + box.xPos[this->animFrame];
+		theX = xpos + box.xPos[animFrame];
 	}
-	int theY = ypos + box.yPos[this->animFrame];
-	int theX2 = theX + box.width[this->animFrame];
-	int theY2 = theY + box.height[this->animFrame];
-	theX = theX + this->xoff[this->animFrame];
-	theY = theY + this->yoff[this->animFrame];
-	theX2 = theX2 + this->xoff[this->animFrame];
-	theY2 = theY2 + this->yoff[this->animFrame];
+	int theY = ypos + box.yPos[animFrame];
+	int theX2 = theX + box.width[animFrame];
+	int theY2 = theY + box.height[animFrame];
+	theX = theX + xoff[animFrame];
+	theY = theY + yoff[animFrame];
+	theX2 = theX2 + xoff[animFrame];
+	theY2 = theY2 + yoff[animFrame];
 	std::vector<int> returns;
 	returns.push_back(theX);
 	returns.push_back(theX2);
@@ -119,19 +119,19 @@ std::vector<int> Sequence::getRealBoxDim(Hitbox box, int xpos, int ypos, bool di
 void Sequence::drawHitBox(Hitbox box, int xpos, int ypos, bool direction, int type)
 {
 	int theX;
-	if (direction ^ flip[this->animFrame])
+	if (direction ^ flip[animFrame])
 	{
-		theX = xpos + (al_get_bitmap_width(this->getFrame()) - box.xPos[this->animFrame] - box.width[this->animFrame]);
+		theX = xpos + (al_get_bitmap_width(getFrame()) - box.xPos[animFrame] - box.width[animFrame]);
 	}
 	else
 	{
-		theX = xpos + box.xPos[this->animFrame];
+		theX = xpos + box.xPos[animFrame];
 	}
-	theX = theX + this->xoff[this->animFrame];
-	int theY = ypos + box.yPos[this->animFrame];
-	theY = theY + this->yoff[this->animFrame];
-	int width = box.width[this->animFrame];
-	int height = box.height[this->animFrame];
+	theX = theX + xoff[animFrame];
+	int theY = ypos + box.yPos[animFrame];
+	theY = theY + yoff[animFrame];
+	int width = box.width[animFrame];
+	int height = box.height[animFrame];
 	if (type == 0)
 	{
 		al_draw_scaled_bitmap(box.vulnImg,0,0,1,1,theX,theY,width,height,0);

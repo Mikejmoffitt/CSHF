@@ -133,14 +133,14 @@ std::vector<std::string> tokenize(std::string s, char delim)
 void Fighter::loadFighter()
 {
 	// Load some basic samples
-	crouchSnd = al_load_sample(("./data/char/" + this->name + "/sfx/crouch.ogg").c_str());
-	standSnd = al_load_sample(("./data/char/" + this->name + "/sfx/stand.ogg").c_str());
-	landSnd = al_load_sample(("./data/char/" + this->name + "/sfx/land.ogg").c_str());
-	jumpSnd = al_load_sample(("./data/char/" + this->name + "/sfx/jump.ogg").c_str());
+	crouchSnd = al_load_sample(("./data/char/" + name + "/sfx/crouch.ogg").c_str());
+	standSnd = al_load_sample(("./data/char/" + name + "/sfx/stand.ogg").c_str());
+	landSnd = al_load_sample(("./data/char/" + name + "/sfx/land.ogg").c_str());
+	jumpSnd = al_load_sample(("./data/char/" + name + "/sfx/jump.ogg").c_str());
 
 	// Load stats
 	std::ifstream loadStat;
-	loadStat.open ("./data/char/" + this->name + "/stats.txt", std::ifstream::in);
+	loadStat.open ("./data/char/" + name + "/stats.txt", std::ifstream::in);
 	std::vector<double> datums;
 	std::string pushMe;
 	while (loadStat.good())
@@ -167,11 +167,11 @@ void Fighter::loadFighter()
 		int yOff = 0;
 		if (i <= 20)
 		{
-			file << "./data/char/" << this->name << "/anim/norm/" << i << ".txt";
+			file << "./data/char/" << name << "/anim/norm/" << i << ".txt";
 		}
 		else
 		{
-			file << "./data/char/" << this->name << "/anim/atk/" << i << ".txt";
+			file << "./data/char/" << name << "/anim/atk/" << i << ".txt";
 		}
 		loadStat.close();
 		loadStat.open(file.str());
@@ -351,7 +351,7 @@ void Fighter::pushBacks()
 	// Pushes a player out of the other's bounding box
 	halfPush = false;
 	int x1,x2,x3,x4,y1,y2,y3,y4;
-	std::vector<int> myBoxData = this->animations[currentAnim].getRealBoxDim(this->animations[currentAnim].bodyBox,xPos,yPos,direction);
+	std::vector<int> myBoxData = animations[currentAnim].getRealBoxDim(animations[currentAnim].bodyBox,xPos,yPos,direction);
 	std::vector<int> otherBoxData = opponent->animations[currentAnim].getRealBoxDim(opponent->animations[opponent->currentAnim].bodyBox,opponent->xPos,opponent->yPos,opponent->direction);
 	x1 = myBoxData[0];
 	x2 = myBoxData[1];
@@ -387,7 +387,7 @@ void Fighter::pushBacks()
 	while (boxCol(x1,x2,y1,y2,x3,x4,y3,y4))
 	{
 		halfPush = true;
-		std::vector<int> myBoxData = this->animations[currentAnim].getRealBoxDim( this->animations[currentAnim].bodyBox , xPos , yPos , direction );
+		std::vector<int> myBoxData = animations[currentAnim].getRealBoxDim( animations[currentAnim].bodyBox , xPos , yPos , direction );
 		std::vector<int> otherBoxData = opponent->animations[currentAnim].getRealBoxDim( opponent->animations[opponent->currentAnim].bodyBox , opponent->xPos , opponent->yPos , opponent->direction );
 		x1 = myBoxData[0];
 		x2 = myBoxData[1];
@@ -410,7 +410,7 @@ void Fighter::pushBacks()
 		}
 		else
 		{
-			this->xPos = this->xPos + pushBackX;
+			xPos = xPos + pushBackX;
 		}
 	}
 	if (!((projPushBackX < 0 && xPos <= minX) || (projPushBackX > 0 && xPos >= maxX)))
@@ -447,7 +447,7 @@ void Fighter::calcDirection()
 {
 	if (inputOk)
 	{
-		if (opponent->xPos < this->xPos)
+		if (opponent->xPos < xPos)
 		{
 			direction = false;
 		}
@@ -537,7 +537,7 @@ Determines which animation to play during normal circumstances
 */
 void Fighter::calcAnimation()
 {
-	if (attackCnt == 0 && this->hitStun == 0)
+	if (attackCnt == 0 && hitStun == 0)
 	{
 		if (grounded && (jumpDel > 0 || landDel > 0))
 		{
@@ -662,12 +662,12 @@ void Fighter::doAttack(int a)
 {
 	if (landDel == 0 && attackCnt == 0)
 	{
-		this->vecX = 0;
-		this->currentAttack = a + (6 * this->crouching) + (12 * (!this->grounded));
+		vecX = 0;
+		currentAttack = a + (6 * crouching) + (12 * (!grounded));
 		// Set that animation!
-		this->forceAnim(currentAttack + 21);
-		this->attackCnt = this->animations[currentAnim].getAnimationLength();
-		std::cout << name << ": Doing attack #" << this->currentAttack << std::endl;
+		forceAnim(currentAttack + 21);
+		attackCnt = animations[currentAnim].getAnimationLength();
+		std::cout << name << ": Doing attack #" << currentAttack << std::endl;
 		attackOk = false;
 	}
 }
@@ -683,7 +683,7 @@ void Fighter::processAttacks()
 
 void Fighter::doPhysics()
 {
-	if (this->hitFreeze > 0)
+	if (hitFreeze > 0)
 	{
 		hitFreeze = hitFreeze - 1;
 	}
@@ -729,7 +729,7 @@ void Fighter::doPhysics()
 			}
 			else
 			{
-				this->xPos = this->xPos + (vecX / 2);
+				xPos = xPos + (vecX / 2);
 			}
 			pushBacks();
 			boundChecks();
@@ -750,28 +750,28 @@ void Fighter::doPhysics()
 
 void Fighter::addSequence(Sequence addMe)
 {
-	this->animations.push_back(addMe);
+	animations.push_back(addMe);
 }
 
 void Fighter::setAnim(int which)
 {
 	if (which != currentAnim)
 	{
-		this->animations[currentAnim].reset();
+		animations[currentAnim].reset();
 	}
-	this->currentAnim = which;
+	currentAnim = which;
 }
 
 void Fighter::forceAnim(int which)
 {
-	this->animations[currentAnim].reset();
-	this->currentAnim = which;
-	this->animations[currentAnim].reset();
+	animations[currentAnim].reset();
+	currentAnim = which;
+	animations[currentAnim].reset();
 }
 
 void Fighter::setDir(bool dir)
 {
-	this->direction = dir;
+	direction = dir;
 }
 
 void Fighter::calcExtremes(int scroll)

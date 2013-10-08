@@ -201,7 +201,7 @@ void startGame(ALLEGRO_DISPLAY *display, string p1, string p2)
 	demo = al_load_sample("./data/music/ft.ogg");
 	al_play_sample(demo, 1, 0, 1, ALLEGRO_PLAYMODE_LOOP, NULL);
 
-	Fighter player1(64,220,"chunli",false,192,128);
+	Fighter player1(64,220,"ryu",false,192,128);
 	Fighter player2(128,220,"cfort",true,192,128);
 
 	// Set up player pointers
